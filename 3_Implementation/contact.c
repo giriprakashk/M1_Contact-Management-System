@@ -1,10 +1,38 @@
-#include"contact_management_system.h"
+/**
+ * @file contact.c
+ * @author Giri Prakash K (e8ec179@sairamtap.edu.in)
+ * @brief This is the main program where the project is run
+ * @version 0.1
+ * @date 2022-03-26
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+struct contact
+{
+long ph;
+char name[20],add[20],email[30];
+}
+list;
+char query[20],name[20];
+FILE *fp, *ft;
+int i,n,ch,l,found;
+/* Start of the application */
+/**
+ * @brief Main program
+ * @return int
+ * @return int 
+ */
 int main()
 {
 main:
 system("cls");
-                                  /********MAIN MENU*******/
-printf("\n\t                             ___WELCOME TO CONTACT MANAGEMENT SYSTEM___                  ");
+                                  /*********************MAIN MENU**********************/
+printf("\n\t                             ________WELCOME TO CONTACT MANAGEMENT SYSTEM________                  ");
 printf("\n\n\n\t\t\tMAIN MENU\n\t\t============================\n\t\t[1] Add a new Contact\n\t\t[2] List all Contacts\n\t\t[3] Search for contact\n\t\t[4] Edit a Contact\n\t\t[5] Delete a Contact\n\t\t[0] Exit\n\t\t============================\n\t\t");
 printf("Enter the choice:");
 scanf("%d",&ch);
@@ -13,7 +41,7 @@ switch(ch)
 case 0:
 printf("\n\n\t\tAre you sure you want to exit?");
 break;
-                                 /*******ADD NEW CONTACTS******/
+                                 /******************ADD NEW CONTACTS*******************/
 case 1:
 system("cls");
 fp=fopen("contact.dll","a");
@@ -38,7 +66,7 @@ fwrite(&list,sizeof(list),1,fp);
 }
 fclose(fp);
 break;
-                            /******LIST OF CONTACTS*********/
+                            /*******************LIST OF CONTACTS************************/
 case 2:
 system("cls");
 printf("\n\t\t================================\n\t\t\tLIST OF CONTACTS\n\t\t================================\n\nName\t\tPhone No\t    Address\t\tE-mail ad.\n=================================================================\n\n");
@@ -63,7 +91,7 @@ if(found!=0)
 fclose(fp);
 }
 break;
-                                 /*****SEARCH CONTACTS*******/
+                                 /****************SEARCH CONTACTS********************/
 case 3:
 system("cls");
 do
@@ -101,7 +129,7 @@ printf("\n\n\tTry again?\n\n\t[1] Yes\t\t[0] No\n\t");
 scanf("%d",&ch);
 }while(ch==1);
 break;
-                            /*****EDIT CONTACTS*******/
+                            /****************EDIT CONTACTS********************/
 case 4:
 system("cls");
 fp=fopen("contact.dll","r");
@@ -134,7 +162,7 @@ fclose(ft);
 remove("contact.dll");
 rename("temp.dat","contact.dll");
 break;
-                                /*****DELETE CONTACTS******/
+                                /****************DELETE CONTACTS*******************/
 case 5:
 system("cls");
 fflush(stdin);
