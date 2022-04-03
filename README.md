@@ -8,7 +8,7 @@
 ![Codiga Badge](https://api.codiga.io/project/32537/score/svg)
 ![Codiga Badge](https://api.codiga.io/project/32537/status/svg)
 ## CPPcheck Analysis 
-[![Cppcheck Analysis](https://github.com/giriprakashk/M1_Contact-Management-System/actions/workflows/windows.yml/badge.svg)](https://github.com/giriprakashk/M1_Contact-Management-System/actions/workflows/windows.yml)
+[![Cppcheck Analysis](https://github.com/giriprakashk/M1_Contact-Management-System/actions/workflows/cppcheck_analysis.yml/badge.svg)](https://github.com/giriprakashk/M1_Contact-Management-System/actions/workflows/cppcheck_analysis.yml)
 ## Valgrind
 [![Valgrind](https://github.com/giriprakashk/M1_Contact-Management-System/actions/workflows/unittesting.yml/badge.svg)](https://github.com/giriprakashk/M1_Contact-Management-System/actions/workflows/unittesting.yml)
 
